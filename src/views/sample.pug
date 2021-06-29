@@ -1,0 +1,37 @@
+div.sample
+  div.sample__medications
+    each medication in sample.CurrentMedications
+      div.medication
+        h3.medication__threaputicArea
+          = medication.TheraputicArea[0]
+        div.medication__info
+          div.medication__drugs
+            each drug in medication.Drugs
+              div.medication__drug
+                div
+                  = drug.Generic
+                div
+                  = `(${drug.Trade})`
+          div.medication__geneInfo
+            table(cellspacing="0", cellpadding="0")
+              thead
+                th Gene
+                th Genotype
+                th Phenotypes/Patient Impact
+              tbody
+                each geneData in medication.GeneInfo
+                  tr
+                    td
+                      = geneData.Gene
+                    td
+                      = geneData.Genotype
+                    td
+                      = geneData.Phenotype
+                tr.medication__status
+                  td(colspan="2")
+                    = medication.Action[0]
+                  td
+                    = medication.GroupPhenotype
+          div.medication__recommendation
+            = medication.Recommendation
+

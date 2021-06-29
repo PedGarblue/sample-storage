@@ -1,0 +1,75 @@
+/* Base values */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #eee095;
+  --secondary-color: #f7f7f7;
+  --warning-color: #d95f24;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+table {
+  width: max-content;
+}
+
+thead {
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+tbody {
+  text-align: center
+}
+
+/* Module values */
+
+.medication__info, .medication__drugs {
+  display: flex;
+}
+
+.medication__drugs {
+  background-color: var(--primary-color);
+  padding: 0.25rem 1rem;
+}
+
+.medication__drug {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.medication__geneInfo {
+  background-color: var(--secondary-color);
+}
+
+.medication__geneInfo th {
+  padding: 0.5rem 2rem;
+}
+.medication__geneInfo th:nth-child(3) {
+  background-color: var(--primary-color);
+}
+
+
+.medication__geneInfo td {
+  padding: 0.5rem 1rem;
+}
+.medication__geneInfo td:nth-child(3) {
+  background-color: var(--primary-color);
+}
+
+.medication__status {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+
+.medication__recommendation {
+  display: flex;
+  padding: 1rem 2rem;
+  text-align: center;
+  align-items: center;
+}
