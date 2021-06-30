@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 const envPath = path.join(__dirname, '../.env');
 
-if (fs.existsSync(envPath) || process.env.DOTENV !== 'FALSE') {
+if (fs.existsSync(envPath)) {
   dotenv.config({ envPath });
 }
 

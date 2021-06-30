@@ -3,7 +3,7 @@ div.sample
     each medication in sample.CurrentMedications
       div.medication
         h3.medication__threaputicArea
-          = medication.TheraputicArea[0]
+          = medication.TheraputicArea.join(', ')
         div.medication__info
           div.medication__drugs
             each drug in medication.Drugs
@@ -29,7 +29,7 @@ div.sample
                       = geneData.Phenotype
                 tr.medication__status
                   td(colspan="2")
-                    = medication.Action[0]
+                    = medication.Action.join(', ')
                   td
                     = medication.GroupPhenotype
           div.medication__recommendation

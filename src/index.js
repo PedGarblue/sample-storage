@@ -5,14 +5,15 @@ const app = require('./app');
 let server; 
 const logger = console;
 
-// database conecction first
+// database connection first
 mongoose.connect(config.mongoose.url, config.mongoose.options)
   .then(async () => {
     logger.info('Connected to MongoDB');
+    // then start the server
     server = app.listen(config.port, () => {
-    logger.log(`Listening to port ${config.port}`);
+      logger.log(`Listening to port ${config.port}`);
+    });
   });
-});
 
 // Exit/Error handlers
 
