@@ -1,17 +1,17 @@
 # Sample Storage
 
-A simple app for storaging a sample in JSON and display it.
+A simple app for storaging a patient sample in JSON and display it.
 
 ## Installing
 
 ```bash
-// check your mongodb url in .env
+# please check your mongodb url in .env
 cp .env.example .env
 
-// install dependencies
+# install dependencies
 npm install
 
-// or
+# or
 
 yarn install
 ```
@@ -21,9 +21,9 @@ Now run the app
 ```bash
 npm run start
 
-// or
+# or
 
 yarn start
 
-// open http://localhost:3001 :)
+# open http://localhost:3001 :)
 ```
